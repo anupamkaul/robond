@@ -51,5 +51,17 @@ sudo -E apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6
 
 ---
 
+DEPENDENCIES for RLL_PLANNER:
+
+I pulled the following (cmake was complaining about rll_msgs):
+
+1. https://github.com/KITrobotics/rll_sdk.git  (this had rll_msgs)  
+2. https://github.com/KITrobotics/rll_stack.git 
+
+With this, I was able to build rll_planning_project ! 
+
+----
+
+
 
 

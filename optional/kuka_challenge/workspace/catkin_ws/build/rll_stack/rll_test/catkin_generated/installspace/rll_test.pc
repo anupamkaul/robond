@@ -1,0 +1,8 @@
+prefix=/home/anupam/robond/optional/kuka_challenge/workspace/catkin_ws/install
+
+Name: rll_test
+Description: Description of rll_test
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/anupam/robond/optional/kuka_challenge/workspace/catkin_ws/install/lib 
+Requires: 

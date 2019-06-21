@@ -1,0 +1,8 @@
+prefix=/home/anupam/robond/optional/kuka_challenge/workspace/catkin_ws/devel
+
+Name: rll_planning_project
+Description: Description of rll_planning_project
+Version: 0.0.1
+Cflags: -I/home/anupam/robond/optional/kuka_challenge/workspace/catkin_ws/devel/include
+Libs: -L/home/anupam/robond/optional/kuka_challenge/workspace/catkin_ws/devel/lib 
+Requires: message_runtime rll_msgs
