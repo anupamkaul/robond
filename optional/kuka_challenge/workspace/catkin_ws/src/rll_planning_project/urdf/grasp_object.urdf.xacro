@@ -28,7 +28,7 @@
   <gazebo reference="grasp_object">
     <mu1>1.0</mu1>
     <mu2>1.0</mu2>
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Red</material>
   </gazebo>
 
 </robot>
