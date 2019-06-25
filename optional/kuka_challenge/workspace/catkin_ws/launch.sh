@@ -5,19 +5,19 @@ catkin_dir=/home/anupam/robond/optional/kuka_challenge/workspace/catkin_ws
 catkin_src_dir=$catkin_dir/src
 
 # The simulation can be started with:
-xterm -e "source devel/setup.bash; roslaunch rll_planning_project moveit_planning_execution.launch" &
+xterm -hold -e "source devel/setup.bash; roslaunch rll_planning_project moveit_planning_execution.launch" &
 sleep 5
 
 # And the planning interface with:
-xterm -e "source devel/setup.bash; roslaunch rll_planning_project planning_iface.launch" & 
+xterm -hold -e "source devel/setup.bash; roslaunch rll_planning_project planning_iface.launch" & 
 sleep 5
 
 # The python node with the path planning algorithm is launched with:
-xterm -e "source devel/setup.bash; roslaunch rll_planning_project path_planner.launch" &
+xterm -hold -e "source devel/setup.bash; roslaunch rll_planning_project path_planner.launch" &
 sleep 5
 
 # A single planning and path execution run can be initiated with:
-#xterm -e "source devel/setup.bash; roslaunch rll_project_runner run_project.launch" &
+#xterm -hold -e "source devel/setup.bash; roslaunch rll_project_runner run_project.launch" &
 #sleep 5
 
 
