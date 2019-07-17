@@ -1,0 +1,40 @@
+Errors:
+
+-- Could not load controller 'PositionJointInterface_trajectory_controller' because controller type 'position_controllers/JointTrajectoryController' does not exist.
+
+-- Action client not connected: PositionJointInterface_trajectory_controller/follow_joint_trajectory
+
+-- Unable to identify any set of controllers that can actuate the specified joints: [ iiwa_joint_1 iiwa_joint_2 iiwa_joint_3 iiwa_joint_4 iiwa_joint_5 iiwa_joint_6 iiwa_joint_7 ]
+
+Readup:
+
+http://wiki.ros.org/joint_trajectory_controller
+
+
+For solving the unable to load joint_position_controller.. issue
+
+Ref:
+https://github.com/qboticslabs/mastering_ros/issues/10
+
+I did:
+sudo apt-get install ros-kinetic-joint-state-controller
+
+Result: Not much help, but a new message now:
+Unable to identify any set of controllers that can actuate the specified joints: [ iiwa_joint_1 iiwa_joint_2 iiwa_joint_3 iiwa_joint_4 iiwa_joint_5 iiwa_joint_6 iiwa_joint_7 ]
+
+---
+
+Read: https://answers.ros.org/question/254084/gazebo-could-not-load-controller-jointtrajectorycontroller-does-not-exist-mastering-ros-chapter-10/
+
+
+Action: sudo apt-get install ros*controller*   (takes about 900MB as I install every ROS controller!)
+
+Result: Solved ! 
+
+New problem:
+
+-- Controller is taking too long to execute trajectory (the expected upper bound for the trajectory execution was 2.338601 seconds). Stopping trajectory.
+
+I can see the robot now trying to reach to pick the object the 'right way' ... just pauses and freezes and hovers over the object.
+
+
