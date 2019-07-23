@@ -242,6 +242,8 @@ bool RLLMoveIface::run_lin_trajectory(geometry_msgs::Pose goal, bool cartesian_t
 	const double jump_threshold = 4.5;
 	bool success;
 
+        ROS_INFO("start run_lin_trajectory");
+
 	manip_move_group.setStartStateToCurrentState();
 	waypoints.push_back(goal);
 	double achieved = manip_move_group.computeCartesianPath(waypoints,
@@ -269,6 +271,7 @@ bool RLLMoveIface::run_lin_trajectory(geometry_msgs::Pose goal, bool cartesian_t
 		return false;
 	}
 
+        ROS_INFO("success exit run_lin_trajectory");
 	return true;
 }
 

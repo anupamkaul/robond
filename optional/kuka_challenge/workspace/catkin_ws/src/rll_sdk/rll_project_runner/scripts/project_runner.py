@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     job_env = actionlib.SimpleActionClient('job_env', JobEnvAction)
     rospy.sleep(0.5)
-    available = job_env.wait_for_server(rospy.Duration.from_sec(4.0))
+    available = job_env.wait_for_server(rospy.Duration.from_sec(30.0))
     if not available:
         rospy.logerr("job env action server is not available")
         sys.exit(1)

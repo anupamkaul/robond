@@ -94,10 +94,10 @@ PlanningIface::PlanningIface(ros::NodeHandle nh)
 	marker.scale.x = primitive.dimensions[0];
 	marker.scale.y = primitive.dimensions[1];
 	marker.scale.z = primitive.dimensions[2];
-	// color red
-	marker.color.r = 1;
+	// color blue
+	marker.color.r = 0;
 	marker.color.g = 0;
-	marker.color.b = 0;
+	marker.color.b = 1;
 	marker.color.a = 1;
 
 	marker.lifetime = ros::Duration();
@@ -108,6 +108,7 @@ PlanningIface::PlanningIface(ros::NodeHandle nh)
 		ROS_INFO_ONCE("Waiting for marker subscribers");
 		ros::Duration(1.0).sleep();
 	}
+	ROS_INFO_ONCE("Got marker subscriber!");
 	marker_pub.publish(marker);
 
 	move_iface.planning_scene_interface.applyCollisionObject(grasp_object);
