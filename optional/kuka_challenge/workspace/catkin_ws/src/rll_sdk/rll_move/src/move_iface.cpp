@@ -245,28 +245,39 @@ bool RLLMoveIface::run_lin_trajectory(geometry_msgs::Pose goal, bool cartesian_t
         ROS_INFO("start run_lin_trajectory");
 
 	manip_move_group.setStartStateToCurrentState();
+        ROS_INFO("1");
 	waypoints.push_back(goal);
+        ROS_INFO("2");
 	double achieved = manip_move_group.computeCartesianPath(waypoints,
 								eef_step, jump_threshold, trajectory);
+        ROS_INFO("3");
 	if (achieved < 1 && achieved > 0) {
+                ROS_INFO("3.1");
 		ROS_ERROR("only achieved to compute %f of the requested path", achieved);
 		return false;
 	} else if (achieved <= 0) {
+                ROS_INFO("3.3");
 		ROS_ERROR("path planning completely failed");
 		return false;
 	}
 
+        ROS_INFO("4");
 	// time parametrization happens in joint space by default
 	if (cartesian_time_parametrization) {
+                ROS_INFO("4.1");
 		success = modify_lin_trajectory(trajectory);
+                ROS_INFO("4.2");
 		if (!success)
 			return false;
 	}
 
 	my_plan.trajectory_= trajectory;
+        ROS_INFO("5");
 
 	success = (manip_move_group.execute(my_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+        ROS_INFO("6");
 	if (!success) {
+                ROS_INFO("7");
 		ROS_ERROR("path execution failed");
 		return false;
 	}
