@@ -37,4 +37,13 @@ New problem:
 
 I can see the robot now trying to reach to pick the object the 'right way' ... just pauses and freezes and hovers over the object.
 
+--- The MoveItErrorCode execute(const Plan& plan, bool wait) in run_lin_trajectory function (move_iface.cpp) is failing.
+A sample code of this function is at: http://docs.ros.org/jade/api/moveit_ros_planning_interface/html/move__group_8cpp_source.html#l00791
+
+---
+
+http://docs.ros.org/kinetic/api/moveit_tutorials/html/index.html
+
+
+
 
