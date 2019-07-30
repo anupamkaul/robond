@@ -1,0 +1,8 @@
+prefix=/home/anupam/robond/samples/kuka_maze_planner/devel
+
+Name: gazebo_grasp_plugin
+Description: Description of gazebo_grasp_plugin
+Version: 1.0.2
+Cflags: -I/home/anupam/robond/samples/kuka_maze_planner/src/rll_sdk/gazebo_grasp_plugin/include
+Libs: -L/home/anupam/robond/samples/kuka_maze_planner/devel/lib -lgazebo_grasp_fix
+Requires: gazebo_ros geometry_msgs roscpp std_msgs gazebo_ros

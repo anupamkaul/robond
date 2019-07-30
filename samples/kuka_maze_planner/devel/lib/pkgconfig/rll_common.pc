@@ -1,0 +1,8 @@
+prefix=/home/anupam/robond/samples/kuka_maze_planner/devel
+
+Name: rll_common
+Description: Description of rll_common
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/anupam/robond/samples/kuka_maze_planner/devel/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/anupam/robond/samples/kuka_maze_planner/install
+
+Name: rll_move
+Description: Description of rll_move
+Version: 0.0.1
+Cflags: -I/home/anupam/robond/samples/kuka_maze_planner/install/include
+Libs: -L/home/anupam/robond/samples/kuka_maze_planner/install/lib -lrll_move
+Requires: message_runtime rll_msgs

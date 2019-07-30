@@ -1,0 +1,8 @@
+prefix=/home/anupam/robond/samples/kuka_maze_planner/devel
+
+Name: rll_control
+Description: Description of rll_control
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/anupam/robond/samples/kuka_maze_planner/devel/lib 
+Requires: 
